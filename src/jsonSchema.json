@@ -1,0 +1,229 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+      "CalendarData": {
+        "type": "array",
+        "items": [
+          {
+            "type": "object",
+            "properties": {
+              "ZoneName": {
+                "type": "string"
+              },
+              "ClassesPerHour": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "Hour": {
+                        "type": "string"
+                      },
+                      "ClassesPerDay": {
+                        "type": "array",
+                        "items": [
+                          {
+                            "type": "array",
+                            "items": {}
+                          },
+                          {
+                            "type": "array",
+                            "items": [
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "Id": {
+                                    "type": "integer"
+                                  },
+                                  "Status": {
+                                    "type": "string"
+                                  },
+                                  "StatusReason": {
+                                    "type": "null"
+                                  },
+                                  "Name": {
+                                    "type": "string"
+                                  },
+                                  "StartTime": {
+                                    "type": "string"
+                                  },
+                                  "Duration": {
+                                    "type": "string"
+                                  },
+                                  "BookingIndicator": {
+                                    "type": "object",
+                                    "properties": {
+                                      "Indicator": {
+                                        "type": "integer"
+                                      },
+                                      "Limit": {
+                                        "type": "integer"
+                                      },
+                                      "Available": {
+                                        "type": "integer"
+                                      }
+                                    },
+                                    "required": [
+                                      "Indicator",
+                                      "Limit",
+                                      "Available"
+                                    ]
+                                  },
+                                  "Trainer": {
+                                    "type": "string"
+                                  },
+                                  "Users": {
+                                    "type": "array",
+                                    "items": {}
+                                  },
+                                  "HasRelatives": {
+                                    "type": "boolean"
+                                  },
+                                  "AllowBookSeatNumber": {
+                                    "type": "boolean"
+                                  },
+                                  "IsClassAvailableOnline": {
+                                    "type": "boolean"
+                                  },
+                                  "ClassRatingSummaryInfo": {
+                                    "type": "object",
+                                    "properties": {
+                                      "TimeTableId": {
+                                        "type": "integer"
+                                      },
+                                      "RatingsCount": {
+                                        "type": "integer"
+                                      },
+                                      "Rating": {
+                                        "type": "number"
+                                      },
+                                      "Ranking": {
+                                        "type": "number"
+                                      }
+                                    },
+                                    "required": [
+                                      "TimeTableId",
+                                      "RatingsCount",
+                                      "Rating",
+                                      "Ranking"
+                                    ]
+                                  }
+                                },
+                                "required": [
+                                  "Id",
+                                  "Status",
+                                  "StatusReason",
+                                  "Name",
+                                  "StartTime",
+                                  "Duration",
+                                  "BookingIndicator",
+                                  "Trainer",
+                                  "Users",
+                                  "HasRelatives",
+                                  "AllowBookSeatNumber",
+                                  "IsClassAvailableOnline",
+                                  "ClassRatingSummaryInfo"
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "array",
+                            "items": {}
+                          },
+                          {
+                            "type": "array",
+                            "items": {}
+                          },
+                          {
+                            "type": "array",
+                            "items": {}
+                          },
+                          {
+                            "type": "array",
+                            "items": {}
+                          }
+                        ]
+                      }
+                    },
+                    "required": [
+                      "Hour",
+                      "ClassesPerDay"
+                    ]
+                  }
+                ]
+              }
+            },
+            "required": [
+              "ZoneName",
+              "ClassesPerHour"
+            ]
+          }
+        ]
+      },
+      "PagerData": {
+        "type": "object",
+        "properties": {
+          "Days": {
+            "type": "array",
+            "items": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "string"
+              },
+              {
+                "type": "string"
+              },
+              {
+                "type": "string"
+              },
+              {
+                "type": "string"
+              },
+              {
+                "type": "string"
+              }
+            ]
+          },
+          "NextDate": {
+            "type": "string"
+          },
+          "PreviousDate": {
+            "type": "string"
+          },
+          "Date": {
+            "type": "string"
+          },
+          "CanGoForward": {
+            "type": "boolean"
+          },
+          "CanGoBack": {
+            "type": "boolean"
+          },
+          "QueryStartDate": {
+            "type": "string"
+          },
+          "QueryEndDate": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "Days",
+          "NextDate",
+          "PreviousDate",
+          "Date",
+          "CanGoForward",
+          "CanGoBack",
+          "QueryStartDate",
+          "QueryEndDate"
+        ]
+      }
+    },
+    "required": [
+      "CalendarData",
+      "PagerData"
+    ]
+  }
